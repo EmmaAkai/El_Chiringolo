@@ -321,3 +321,25 @@ main {
 .icon__list li {
     margin: 0 15px;
 }
+
+
+@media screen and (max-width: 600px){
+    .header {
+        height: 25vh;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li{
+        margin: 10px 0;
+
+    }
+
+    .nologo {
+        margin: 70px 0;
+        padding: 10px 90px;
+    }
+
+}
