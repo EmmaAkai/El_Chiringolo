@@ -92,7 +92,7 @@ main {
 }
 
 .hero__container {
-    background-color: rgba(4, 27, 58, 0.308);
+    background-color: rgba(0, 19, 43, 0.404);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -103,16 +103,52 @@ main {
 }
 
 .hero__title {
-    font-family: DynaPuff SemiBold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
     font-size: 100px;
     font-weight: 700;
-    margin-top: 90px;
+    margin-top: 150px;
     margin-bottom: 20px;
     text-shadow: 
                     -2px -2px 0 rgb(141, 103, 103),  
                     2px -2px 0 rgb(75, 138, 146),
                     -2px  2px 0 rgb(141, 103, 103),
                     2px  2px 0 rgb(75, 138, 146);
+}
+
+.hero__title h1 {
+    font-family: DynaPuff SemiBold;
+}
+
+.space {
+    margin: 0 10px;
+}
+
+.hero__title h1:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: 0.2s;
+    rotate: 15deg;
+    text-shadow: 
+                    -4px -4px 0 rgb(179, 131, 131),  
+                    4px -4px 0 rgb(100, 165, 173),
+                    -4px  4px 0 rgb(179, 131, 131),
+                    4px  4px 0 rgb(100, 165, 173);
+}
+
+.hero__title h1:nth-child(even):hover {
+    color: rgb(66, 204, 223); /* Cambia el color del texto */
+    margin-right: 10px; /* Ajusta el margen derecho */
+    rotate: 15deg;
+}
+
+.hero__title h1:nth-child(odd):hover {
+    color: rgb(247, 169, 169); /* Cambia el color del texto */
+    margin-right: 10px; /* Ajusta el margen derecho */
+    rotate: -15deg;
 }
 
 .hero__description {
@@ -123,7 +159,7 @@ main {
 }
 
 .hero__btn {
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 15px 40px;
 
     
@@ -169,7 +205,7 @@ main {
 
     text-align: center;
     box-sizing: border-box;
-    margin-top: 22vh;
+    margin-top: 7vh;
     font-size: 20px;
     font-weight: 600;
 }
@@ -267,6 +303,14 @@ main {
     justify-content: space-between;
 
     color: rgb(204,204,204);
+}
+
+.footer a {
+    color: rgb(204,204,204);
+}
+
+.footer a:hover {
+    color: rgb(71, 167, 211);
 }
 
 .icon__list {
