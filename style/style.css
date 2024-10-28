@@ -295,6 +295,7 @@ main {
 
 /*FOOTER-----------------------------------*/
 .footer {
+    width: 100%;
     background-color: rgb(54, 49, 49);
 
     padding: 40px 50px 20px;
@@ -323,10 +324,12 @@ main {
 }
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1200px){
     .header {
         height: 25vh;
+        padding-bottom: 300px;
     }
+
     
     .navbar ul {
         flex-direction: column;
