@@ -65,6 +65,7 @@
 .info__btn:hover {
     scale: 1.05;
     transition: 0.2s;
+    cursor: pointer;
 
     background-color: rgb(177, 138, 138);
 }
