@@ -70,6 +70,17 @@ productsList.addEventListener("click", (e) => {
 })
 
 
+function pagar () {
+    // Guardar datos en sessionStorage
+    localStorage.setItem('productos', JSON.stringify(productos));
+    localStorage.setItem('total', total);
+
+    alert("Total a pagar: $ " + total);
+    window.location.href = "compra.html"; 
+}
+
+
+
 cartProducts.addEventListener("click", (e) => {
 
     if (e.target.classList.contains("icon-close")) {
