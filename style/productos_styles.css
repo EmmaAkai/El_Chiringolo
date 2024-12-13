@@ -1,3 +1,151 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/*CART ----------------------------------------*/
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4);
+
+    transition: all 0.5s;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #fefefe;
+    margin: 5% 65%; 
+    padding: 20px;
+    border: rgb(196, 168, 168) 2px solid;
+    width: 30%;
+
+    max-height: 500px;
+    overflow: scroll;
+    
+    border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
+.modal-tittle {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-products{
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 10px;
+
+    overflow: scroll;
+}
+
+
+
+.listed-product {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+
+}
+
+.listed-product h3 {
+    width: 40%;
+    font-weight: 300;
+}
+
+.listed-product p {
+    width: 20%;
+}
+
+.modal-products img {
+    width: 60px;
+    height: 60px;
+    
+}
+
+.modal-products svg {
+    cursor: pointer;
+    border-radius: 5px;  
+}
+
+.modal-products svg:hover {
+    background-color: rgb(221, 221, 221);
+    
+}
+
+.modal-products::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.modal-info button {
+    width: 100%;
+    height: 30px;
+
+    border-radius: 5px;
+    border:rgb(196, 168, 168) 2px solid;
+
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.comprar-btn {
+    background-color: rgb(216, 192, 192);
+}
+
+.modal-info button:hover {
+    background-color: rgb(202, 162, 162);
+    cursor: pointer;
+}
+
+.modal-info h4 {
+    font-weight: 300;
+    margin: 15px 0 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cart-empty {
+    padding: 20px;
+    text-align: center;
+}
+
+/*BOXS-----------------------------------------*/
 .box__container {
     margin: 0px 0;
     padding: 10% 0 ;

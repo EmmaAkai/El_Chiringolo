@@ -16,9 +16,39 @@
                 <li><a href="./productos.html" class="nologo">PRODUCTOS</a></li>
                 <li><a href="./contacto.html" class="nologo">CONTACTO</a></li>
                 <li><a href="./reseñas.html" class="nologo">RESEÑAS</a></li>
+                <li>
+                    <div class="cart__img">
+                        <svg xmlns="http://www.w3.org/2000/svg"  id="btn-cart" width="128" height="128" viewBox="0 0 24 24"><path fill="#fffaf5" d="M19 20c0 1.11-.89 2-2 2a2 2 0 0 1-2-2c0-1.11.89-2 2-2a2 2 0 0 1 2 2M7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2c1.11 0 2-.89 2-2s-.89-2-2-2m.2-3.37l-.03.12c0 .14.11.25.25.25H19v2H7a2 2 0 0 1-2-2c0-.35.09-.68.24-.96l1.36-2.45L3 4H1V2h3.27l.94 2H20c.55 0 1 .45 1 1c0 .17-.05.34-.12.5l-3.58 6.47c-.34.61-1 1.03-1.75 1.03H8.1zM8.5 11H10V9H7.56zM11 9v2h3V9zm3-1V6h-3v2zm3.11 1H15v2h1zm1.67-3H15v2h2.67zM6.14 6l.94 2H10V6z"/></svg>
+                        <span id="ProdContador">0</span>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
+    <section class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-tittle">
+                <h2>Carrito de compras</h2>
+                <span class="close">&times;</span>
+            </div>
+
+            <div class="modal-products" id="modal-products">
+                <div class="listed-product" id="listed-product" style="display: flex; justify-content: center; align-items: center;">
+                    <h3>El carrito esta vacio.</h3>
+                </div>
+            </div>
+
+            <div class="modal-info">
+                <div style="display: flex;">
+                    <h4>Total: $</h4>
+                    <h4 id="totalAPagar">0</h4>
+                </div>
+                
+                <button class="comprar-btn"><a href="">COMPRAR</a></button>
+            </div>
+
+        </div>
+    </section>
     <main>
         <section class="box__container">
             <div class="box">
@@ -26,32 +56,21 @@
                     <img src="../img/products/ventilador-negro.webp" alt="Ventilador Negro">
                 </div>
                 <div class="info__container">
-                    <div>
+                        <img style="display: none;" src="../img/products/ventilador-negro.webp" alt="Ventilador Negro">
                         <h2>Ventilador Negro</h2>
-                    </div>
-                    <div>
                         <p>$50.990</p>
-                    </div>
-                    <div>
-                        <button class="info__btn">Comprar</button>
-                    </div>
+                        <button class="info__btn" onclick="agregarProducto('Ventilador Negro',50990,'../img/products/ventilador-negro.webp')" >Añadir al carrito</button>
                 </div>
-                
             </div>
             <div class="box">
                 <div class="img__container">
                     <img src="../img/products/aire-acondicionado-sansei.webp" alt="Aire Acondicionado Sansei">
                 </div>
                 <div class="info__container">
-                    <div>
+                        <img style="display: none;" src="../img/products/aire-acondicionado-sansei.webp" alt="Aire Acondicionado Sansei">
                         <h2>Aire Acondicionado Sansei</h2>
-                    </div>
-                    <div>
                         <p>$690.990</p>
-                    </div>
-                    <div>
-                        <button class="info__btn">Comprar</button>
-                    </div>
+                        <button class="info__btn" onclick="agregarProducto('Aire Acondicionado Sansei',690990,'../img/products/aire-acondicionado-sansei.webp')" >Añadir al carrito</button>
                 </div>
             </div>
             <div class="box">
@@ -59,15 +78,10 @@
                     <img src="../img/products/Licuadora.webp" alt="Licuadora Moulinex">
                 </div>
                 <div class="info__container">
-                    <div>
+                        <img style="display: none;" src="../img/products/Licuadora.webp" alt="Licuadora Moulinex">
                         <h2>Licuadora Moulinex</h2>
-                    </div>
-                    <div>
                         <p>$79.090</p>
-                    </div>
-                    <div>
-                        <button class="info__btn">Comprar</button>
-                    </div>
+                        <button class="info__btn" onclick="agregarProducto('Licuadora Moulinex', 79090, '../img/products/Licuadora.webp')" >Añadir al carrito</button>
                 </div>
             </div>
             <div class="box">
@@ -75,15 +89,10 @@
                     <img src="../img/products/pava-electrica.webp" alt="Pava electrica">
                 </div>
                 <div class="info__container">
-                    <div>
+                        <img style="display: none;" src="../img/products/pava-electrica.webp" alt="Pava electrica">
                         <h2>Pava Electrica</h2>
-                    </div>
-                    <div>
                         <p>$17.890</p>
-                    </div>
-                    <div>
-                        <button class="info__btn">Comprar</button>
-                    </div>
+                        <button class="info__btn" onclick="agregarProducto('Pava Electrica', 17890, '../img/products/pava-electrica.webp')" >Añadir al carrito</button>
                 </div>
             </div>
             <div class="box">
@@ -91,15 +100,10 @@
                     <img src="../img/products/dispenser-frimax.webp" alt="Dispenser frimax">
                 </div>
                 <div class="info__container">
-                    <div>
+                        <img style="display: none;" src="../img/products/dispenser-frimax.webp" alt="Dispenser frimax">
                         <h2>Dispenser Frimax</h2>
-                    </div>
-                    <div>
                         <p>$287.430</p>
-                    </div>
-                    <div>
-                        <button class="info__btn">Comprar</button>
-                    </div>
+                        <button class="info__btn" onclick="agregarProducto('Dispenser Frimax', 287430 , '../img/products/dispenser-frimax.webp')" >Añadir al carrito</button>
                 </div>
             </div>
             <div class="box">
@@ -107,15 +111,10 @@
                     <img src="../img/products/freidora-de-aire.webp" alt="Freidora de aire">
                 </div>
                 <div class="info__container">
-                    <div>
+                        <img style="display: none;" src="../img/products/freidora-de-aire.webp" alt="Freidora de aire">
                         <h2>Freidora de aire Maverick</h2>
-                    </div>
-                    <div>
                         <p>$187.499</p>
-                    </div>
-                    <div>
-                        <button class="info__btn">Comprar</button>
-                    </div>
+                        <button class="info__btn" onclick="agregarProducto('Freidora de aire Maverick',187499,'../img/products/freidora-de-aire.webp')">Añadir al carrito</button>
                 </div>
             </div>
             <div class="box">
@@ -123,14 +122,10 @@
                     <img src="../img/products/Aspiradora-industrial.webp" alt="aspiradora industrial">
                 </div>
                 <div class="info__container">
-                    <div>
+                        <img style="display: none;" src="../img/products/Aspiradora-industrial.webp" alt="aspiradora industrial">
                         <h2>Aspiradora Industrial</h2>
-                    </div>
-                    <div>
                         <p>$127.639</p>
-                    </div>
-                    <div>
-                        <button class="info__btn">Comprar</button>
+                        <button class="info__btn" onclick="agregarProducto('Aspiradora Industrial', 127639, '../img/products/Aspiradora-industrial.webp')">Añadir al carrito</button>
                     </div>
                 </div>
             </div>
@@ -139,15 +134,10 @@
                     <img src="../img/products/Freezer-Inverter.webp" alt="Freezer inverter">
                 </div>
                 <div class="info__container">
-                    <div>
+                    <img style="display: none;" src="../img/products/Freezer-Inverter.webp" alt="Freezer inverter">
                         <h2>Freezer Inverter</h2>
-                    </div>
-                    <div>
                         <p>$821.199</p>
-                    </div>
-                    <div>
-                        <button class="info__btn">Comprar</button>
-                    </div>
+                        <button class="info__btn" onclick="agregarProducto('Freezer Inverter', 821199, '../img/products/Freezer-Inverter.webp')">Añadir al carrito</button>
                 </div>
             </div>
             <div class="box">
@@ -155,15 +145,10 @@
                     <img src="../img/products/Aspiradora-rumba.webp" alt="Aspiradora rumba">
                 </div>
                 <div class="info__container">
-                    <div>
+                    <img style="display: none;" src="../img/products/Aspiradora-rumba.webp" alt="Aspiradora rumba">
                         <h2>Aspiradora Rumba</h2>
-                    </div>
-                    <div>
                         <p>$279.999</p>
-                    </div>
-                    <div>
-                        <button class="info__btn">Comprar</button>
-                    </div>
+                        <button class="info__btn" onclick="agregarProducto('Aspiradora Rumba', 279.999, '../img/products/Aspiradora-rumba.webp')">Añadir al carrito</button>
                 </div>
             </div>
         </section>
@@ -186,4 +171,5 @@
         </ul>
     </footer>
 </body>
+<script src="../scripts/cartApp.js"></script>
 </html>

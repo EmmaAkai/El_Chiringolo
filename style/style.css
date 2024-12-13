@@ -86,6 +86,55 @@ main {
 .logo__container:hover {
     background-color: rgb(196, 168, 168);
 }
+/*CART --------------------------------------------------------------*/
+
+.cart__img {
+    scale: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+
+
+    height: 10vh;
+    width: 15vh;
+
+    
+    
+    font-family: nunito sans;
+    color: rgb(255,250,245);
+    background-color: rgb(201, 190, 190);
+    border-radius: 15px;
+}
+
+#btn-cart {
+    scale: 0.7;
+}
+
+#ProdContador {
+    scale: 0.8;
+    margin-left: -15px;
+    margin-top: 45px;
+
+    background-color: rgb(251,142,127);
+    border-radius: 100%;
+    display: inline-block;
+    width: 50px;
+    aspect-ratio: 1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart__img:hover{
+    scale: 1;
+    transition: 0.5s;
+    padding: 10;
+
+    background-color: rgb(196, 168, 168);
+    cursor: pointer;
+}
 
 /*HERO---------------------------------------------------------------*/
 .hero {
