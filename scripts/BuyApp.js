@@ -1,56 +1,41 @@
-//SIN IMPLEMENTAR SOLO DE REFERENCIA
+// Recuperar los datos del localStorage
+const prods = JSON.parse(sessionStorage.getItem('productos')) || [];
+const Ptotal = sessionStorage.getItem('total') || 0;
 
+const empty = document.getElementById("empty");
 
+let listaProductos = document.querySelector(".lista-productos");
 
-// Recuperar los datos del sessionStorage
-const prods = JSON.parse(localStorage.getItem('productos')) || [];
-const Ptotal = localStorage.getItem('total') || 0;
-
-// Mostrar el resumen de la compra
-const resumen = document.getElementById("detalle");
-let resumenTexto = "Resumen de la compra:<br><br>";
-
-// Usar un bucle for tradicional para los productos
-for (let i = 0; i < prods.length; i++) {
-    const prod = prods[i];
-    resumenTexto += `${prod.nombre}: $${prod.precio}<br>`;
+if (prods.length === 0) {
+    listaProductos.innerHTML = `
+        <h4>El carrito esta vacio.</h4>
+    `;
 }
 
-resumenTexto += `<br>Total a pagar: $${total}`;
-resumen.innerHTML = resumenTexto;
 
-// Función envío del Formulario
-function enviarFormulario(event) {
-    event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
 
-    // Obtiene datos de contacto
-    const nombre = document.getElementById('nombre').value.trim();
-    const apellido = document.getElementById('apellido').value.trim();
-    const email = document.getElementById('contactoEmail').value.trim();
-    const telefono = document.getElementById('telefono').value.trim();
-
-    if (!nombre || !apellido || !email || !telefono) {
-        alert("Por favor, completa todos los campos de contacto.");
-        return; // detiene la ejecucuión de la función hasta que pase el if
-    }
-
-    // Crea el listado del carrito
-    let carritoContenido = '';
-    for (let i = 0; i < productos.length; i++) {
-        const producto = productos[i];
-        carritoContenido += `${producto.nombre} - $${producto.precio}\n`;
-    }
-
-    // Agrega al valor total el signo de pesos $
-    const totalConPesos = `$${total}`;
-
-    // Asigna los datos a los campos ocultos del formulario
-    document.getElementById('carritoData').value = carritoContenido;
-    document.getElementById('totalCarrito').value = totalConPesos;
-
-    // Envía el formulario a Formspree
-    document.getElementById('formulario').submit();
+if (listaProductos) {
+    prods.forEach(product => {
+        const prodDiv = document.createElement("div");
+        prodDiv.classList.add("item-producto");
+        prodDiv.innerHTML = `
+            <h4>${product.quantity}</h4>
+            <img src="${product.img}" alt="">
+            <h3>${product.tittle}</h3>
+            <p>${product.price}</p>
+        `;
+        listaProductos.appendChild(prodDiv);
+    });
 }
 
-// Asociamos el evento al botón de enviar
-document.getElementById('botonEnviar').addEventListener('click', enviarFormulario);
+let total = document.querySelector(".total");
+if (total) {
+    total.innerHTML = `
+        <p>Total: $${Ptotal}</p>
+    `;
+}
+
+function gracias() {
+    sessionStorage.clear();
+    window.location.href = "../html/gracias.html";
+}

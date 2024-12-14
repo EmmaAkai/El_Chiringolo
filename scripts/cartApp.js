@@ -72,11 +72,10 @@ productsList.addEventListener("click", (e) => {
 
 function pagar () {
     // Guardar datos en sessionStorage
-    localStorage.setItem('productos', JSON.stringify(productos));
-    localStorage.setItem('total', total);
+    sessionStorage.setItem('productos', JSON.stringify(productos));
+    sessionStorage.setItem('total', valorTotal.textContent);
 
-    alert("Total a pagar: $ " + total);
-    window.location.href = "compra.html"; 
+    window.location.href = "../html/compra.html"; 
 }
 
 
@@ -135,7 +134,5 @@ const showHTML = () => {
     valorTotal.innerText = `${total}`;
     countProducts.innerText = totalQuantity;
 
-
-    
 }
 
