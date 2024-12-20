@@ -72,8 +72,8 @@ productsList.addEventListener("click", (e) => {
 
 function pagar () {
     // Guardar datos en sessionStorage
-    sessionStorage.setItem('productos', JSON.stringify(productos));
-    sessionStorage.setItem('total', valorTotal.textContent);
+    localStorage.setItem('productos', JSON.stringify(productos));
+    localStorage.setItem('total', valorTotal.textContent);
 
     window.location.href = "../html/compra.html"; 
 }

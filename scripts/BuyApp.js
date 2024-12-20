@@ -1,6 +1,6 @@
 // Recuperar los datos del localStorage
-const prods = JSON.parse(sessionStorage.getItem('productos')) || [];
-const Ptotal = sessionStorage.getItem('total') || 0;
+const prods = JSON.parse(localStorage.getItem('productos')) || [];
+const Ptotal = localStorage.getItem('total') || 0;
 
 const empty = document.getElementById("empty");
 
